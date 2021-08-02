@@ -88,8 +88,8 @@ class Data1(Data):
         product= Product.find_by_id(id)
         
         if product:
-            # product.user_id = data['user_id'],
-            # product.rating = data['rating'],
+            product.user_id = data['user_id'],
+            product.rating = data['rating'],
             product.desc = data['desc']
         product.save_to_db()
         return product.json()
